@@ -1,0 +1,84 @@
+<style title="local">
+#crn-radiogroup-322852 { 
+  margin-top: 12px;
+}
+</style><div class="component-holder ng-binding ng-scope" data-component="crn-navbar" id="crn-navbar-986427"> 
+  <nav class="navbar navbar-default"> 
+    <div class="container-fluid"> 
+      <div class="navbar-header"> 
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+        <a class="component-holder ng-binding ng-scope navbar-brand" data-component="crn-image" href="#/home"> <img src="plugins/cronapp-framework-js/dist/img/logo.png" style="max-height:30px; margin-top:-5px" id="crn-navbar-logo" data-component="crn-image"> </a> 
+      </div> 
+      <div id="navbar" class="navbar-collapse collapse"> 
+        <ul class="nav navbar-nav" style="float:none"> 
+          <cron-dynamic-menu class="component-holder" data-component="crn-dynamic-menu" options="{&quot;subMenuOptions&quot;:[{&quot;id&quot;:&quot;1h85bvnhg7511&quot;,&quot;name&quot;:&quot;Home&quot;,&quot;title&quot;:&quot;{{'Home.view.Home' | translate}}&quot;,&quot;iconClass&quot;:&quot;fa fa-home&quot;,&quot;action&quot;:&quot;cronapi.screen.changeView('#/home', [])&quot;,&quot;level&quot;:1,&quot;menuItems&quot;:[]}]}">
+            Dynamic Menu
+          </cron-dynamic-menu> 
+        </ul> 
+      </div> 
+    </div> 
+  </nav> 
+</div> 
+<div ui-view="" class="container-fluid main-view" data-container="true" data-replace="false">
+  <div class="component-holder ng-binding ng-scope col-md-4 col-sm-4 col-xs-4 col-lg-4" data-component="crn-button" id="crn-button-606573">
+    <button class="btn btn-default k-button" ng-click="cronapi.server('blockly.Strapi.api').run()" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-download-alt"></i> <span>{{'CarregarTodosOsPosts' | translate}}</span></button>
+  </div><div class="component-holder col-md-12 col-lg-12 col-sm-12 col-xs-12" ng-model="vars.radioType" data-component="crn-radiogroup" id="crn-radiogroup-322852">
+    <div class="k-content" data-component="crn-radioOption">
+      <input class="k-radio" type="radio" crn-value="" value="/posts" name="optionsRadios" id="optionsRadios1crn-radiogroup-322852">
+      <label class="k-radio-label" for="optionsRadios1crn-radiogroup-322852">posts</label>
+    </div>
+    <div class="k-content" data-component="crn-radioOption">
+      <input class="k-radio" type="radio" crn-value="" value="2" name="optionsRadios" id="optionsRadios2crn-radiogroup-322852">
+      <label class="k-radio-label" for="optionsRadios2crn-radiogroup-322852">eventos</label>
+    </div>
+  </div>
+  <div class="component-holder ng-binding ng-scope col-md-12 col-lg-12 col-sm-12 col-xs-12" data-component="crn-textinput" id="crn-textinput-131500">
+    <div class="form-group">
+      <label for="input2271">Título</label>
+      <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.titulo" class="form-control k-textbox" id="input2271" placeholder="_">
+    </div>
+  </div>
+  <div class="component-holder ng-binding ng-scope col-md-12 col-lg-12 col-sm-12 col-xs-12" data-component="crn-textinput" id="crn-textinput6781">
+    <div class="form-group">
+      <label for="input2271">Conteúdo</label>
+      <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.conteudo" class="form-control k-textbox" id="input2271" placeholder="__">
+    </div>
+  </div><div class="component-holder ng-binding ng-scope col-md-12 col-lg-12 col-sm-12 col-xs-12" data-component="crn-textinput" id="crn-textinput94571">
+    <div class="form-group">
+      <label for="input2271">Criado em:</label>
+      <input type="datetime" mask="" mask-placeholder="" ng-required="false" ng-model="vars.criadoem" class="form-control k-textbox" id="input2271" placeholder="__">
+    </div>
+  </div>
+  <div class="component-holder ng-binding ng-scope col-md-2 col-lg-2 col-sm-2 col-xs-2" data-component="crn-button" id="crn-button-242819"><button class="btn btn-default k-button" ng-click="cronapi.server('blockly.Strapi.postaTitle').run()" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-pencil"></i> <span>Postar</span></button></div>
+</div> 
+<div class="modal fade" id="modalPassword"> 
+  <div class="modal-dialog"> 
+    <div class="modal-content"> 
+      <div class="modal-header"> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button> 
+        <h4 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h4> 
+      </div> 
+      <div class="modal-body"> 
+        <form class="form-validation" autocomplete="off" name="form" role="form"> 
+          <div class="text-danger wrapper text-center" ng-show="authError"> 
+          </div> 
+          <div class="list-group list-group-sm"> 
+            <div class="list-group-item"> 
+              <input type="password" class="form-control no-border" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}"> 
+            </div> 
+            <div class="list-group-item"> 
+              <input type="password" class="form-control no-border" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}"> 
+            </div> 
+            <div class="list-group-item"> 
+              <input type="password" class="form-control no-border" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}"> 
+            </div> 
+          </div> 
+        </form> 
+      </div> 
+      <div class="modal-footer"> 
+        <button class="btn btn-primary" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading">{{"Home.view.ChangePassword" | translate}}</button> 
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{'Home.view.Close' | translate}}</button> 
+      </div> 
+    </div> 
+  </div> 
+</div>
